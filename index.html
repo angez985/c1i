@@ -1,28 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Core 1 Interaction</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Core 1 Interaction</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: black;
+    }
+
+    .side-image {
+      position: fixed;
+      top: 0;
+      width: 10%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .left-image {
+      left: 0;
+    }
+
+    .right-image {
+      right: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 80%;
+      margin: 0 auto;
+      padding: 2rem 0;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    img.main {
+      max-width: 100%;
+      height: auto;
+      margin: 2rem 0;
+    }
+
+    p {
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .side-image {
+        display: none;
+      }
+
+      .container {
+        max-width: 95%;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img class="side-image left-image" src="Left-Fence.png" alt="Left Decorative Image">
+  <img class="side-image right-image" src="Right-Fence.png" alt="Right Decorative Image">
+
+
+  <div class="container">
     <h1>DOORS OF BUSHWICK</h1>
-    <p> Looking through the thresholds.</p>
-    <img src="Door-Gallery.png">
-  </body>
+    <h2>Looking through the thresholds.</h2>
+    <img class="main" src="Door-Drawings.png" alt="Door Drawings">
+
+    <p>
+      Our journey begins in the Georgian era of 1714 to 1837, a time of refined simplicity. Front doors during this era embraced the symmetry and classic proportions of the time. Solid, panelled doors, often painted in bold colours, adorned the facades of townhouses. The iconic Georgian fanlight, a semi-circular window above the door, allowed natural light to grace the entrance hall and became a hallmark of the era’s architectural design.
+      <br><br>
+      Victorian front doors embraced opulence with vibrant hues and intricate stained glass. Rich colours like deep reds and royal blues adorned grand entrances, reflecting the era’s bold taste. Elaborate stained glass panels, inspired by Gothic Revival motifs, filtered sunlight into entrance halls, creating mesmerising displays of light and colour.
+      <br><br>
+      The Edwardian era sought a return to elegance, departing from the excesses of the Victorian period. Front doors during this time featured cleaner lines and a more restrained approach to ornamentation. The use of stained glass continued to be popular, but the designs were often more subdued, incorporating floral patterns and subtle hues. Edwardian front doors exuded a sense of sophistication and grace.
+      <br><br>
+      As the 20th century dawned, the Art Deco movement swept through design, leaving its mark on front doors as well. Art Deco doors embraced sleek lines, geometric shapes, and stylish materials like glass, chrome, and polished wood. The use of vibrant colours, stepped forms, and sunburst motifs brought a touch of modernity to the entrances of homes during this era.
+      <br><br>
+      In the present day, front doors have become canvases of personal expression. Homeowners embrace a diverse range of styles, from traditional to modern and everything in between. The revival of period door designs has gained popularity, with craftsmen incorporating modern materials and techniques to recreate the splendour of bygone eras.
+    </p>
+  </div>
+</body>
 </html>
 
-<style>
-body{font-family:'Courier New', Courier, monospace ;
-position: relative;
-text-align: center;
-margin-left: 10%;
-margin-right: 10%;
-background-color: black;
-color: aliceblue;}
-h1 {margin-top: 1cm;}
-img{max-width: 100%;
-  height: auto;
-  align-content: center;
-  margin-top: 1cm;
-}</style>
