@@ -15,6 +15,10 @@
       font-family: 'Courier New', Courier, monospace;
       background-color: white;
       color: black;
+      display: grid;
+      grid-template-columns: 10% 1fr 10%;
+      grid-template-areas:
+        "left main right";
     }
 
     .side-image {
@@ -34,69 +38,92 @@
       right: 0;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 80%;
-      margin: 0 auto;
-      padding: 2rem 0;
-      text-align: center;
-      position: relative;
+    .main-content {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 100%;
+      justify-items: center;
       z-index: 2;
+      padding: 2rem 0;
     }
 
-    h1 {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    img.main {
+    .top-image {
+      width: 60%;
       max-width: 100%;
-      height: auto;
-      margin: 2rem 0;
+      margin-bottom: 2rem;
     }
 
-    p {
+    .section-text {
+      width: 70%;
       text-align: center;
+      margin: 2rem 0;
       line-height: 1.6;
     }
 
+    .section-image {
+      width: 80%;
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0 3rem;
+    }
+
     @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+      }
+
       .side-image {
         display: none;
       }
 
-      .container {
-        max-width: 95%;
-        padding: 1rem;
+      .top-image {
+        width: 90%;
+      }
+
+      .section-text {
+        width: 90%;
+      }
+
+      .section-image {
+        width: 95%;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Side Images -->
   <img class="side-image left-image" src="Left-Fence.png" alt="Left Decorative Image">
   <img class="side-image right-image" src="Right-Fence.png" alt="Right Decorative Image">
 
+  <!-- Main Grid Content -->
+  <div class="main-content">
+    <!-- Top Image -->
+    <img class="top-image" src="Website-Title.png" alt="Website Title">
 
-  <div class="container">
-    <h1>DOORS OF BUSHWICK</h1>
-    <h2>Looking through the thresholds.</h2>
-    <img class="main" src="Door-Drawings.png" alt="Door Drawings">
+    <!-- Section 1 -->
+    <div class="section-text">
+      <p>
+Bushwick’s history is one of layered occupation and continuous transformation. Originally home to the Lenape people, the neighborhood evolved through Dutch settlement, farmland, industrialization, waves of European immigration, and, in more recent decades, the influx of artists and diverse immigrant communities. Each era has left a visible imprint, and the built environment serves as a living archive of these social and economic shifts. Streets, buildings, and particularly doors offer tangible evidence of the neighborhood’s changing identity. Doors in Bushwick are more than functional objects; they are material records of architectural styles, economic conditions, and cultural preferences across time. From late 19th-century brownstone entrances to mid-century industrial adaptations, to the contemporary modifications of private and public buildings, the evolution of door design reflects broader trends in urban development and community demographics. Ornamental woodwork, ironwork, and period-specific hardware mark the craftsmanship and aesthetic priorities of each era, revealing not only architectural history but also social values and personal investment in domestic spaces.
+      </p>
+    </div>
+    <img class="section-image" src="Door-Hero-1.png" alt="Georgian Door">
 
-    <p>
-      Our journey begins in the Georgian era of 1714 to 1837, a time of refined simplicity. Front doors during this era embraced the symmetry and classic proportions of the time. Solid, panelled doors, often painted in bold colours, adorned the facades of townhouses. The iconic Georgian fanlight, a semi-circular window above the door, allowed natural light to grace the entrance hall and became a hallmark of the era’s architectural design.
-      <br><br>
-      Victorian front doors embraced opulence with vibrant hues and intricate stained glass. Rich colours like deep reds and royal blues adorned grand entrances, reflecting the era’s bold taste. Elaborate stained glass panels, inspired by Gothic Revival motifs, filtered sunlight into entrance halls, creating mesmerising displays of light and colour.
-      <br><br>
-      The Edwardian era sought a return to elegance, departing from the excesses of the Victorian period. Front doors during this time featured cleaner lines and a more restrained approach to ornamentation. The use of stained glass continued to be popular, but the designs were often more subdued, incorporating floral patterns and subtle hues. Edwardian front doors exuded a sense of sophistication and grace.
-      <br><br>
-      As the 20th century dawned, the Art Deco movement swept through design, leaving its mark on front doors as well. Art Deco doors embraced sleek lines, geometric shapes, and stylish materials like glass, chrome, and polished wood. The use of vibrant colours, stepped forms, and sunburst motifs brought a touch of modernity to the entrances of homes during this era.
-      <br><br>
-      In the present day, front doors have become canvases of personal expression. Homeowners embrace a diverse range of styles, from traditional to modern and everything in between. The revival of period door designs has gained popularity, with craftsmen incorporating modern materials and techniques to recreate the splendour of bygone eras.
-    </p>
+    <!-- Section 2 -->
+    <div class="section-text">
+      <p>
+At the same time, these thresholds illustrate what has been lost. The decline of skilled artisanal labor, the increasing prevalence of standardized construction methods, and shifts in property ownership have diminished the expression of care and individuality in many doors. Where previous generations might have commissioned detailed carvings or maintained distinctive entryways, modern pressures often favor efficiency over craftsmanship, leaving the material culture of Bushwick’s past increasingly fragile. Often described by residents as a forgotten neighborhood, Bushwick was once a solid blue-collar community. But starting in the 1960s, a steady barrage of demographic changes and ruinous Great Society policies battered it down. So total was the devastation that even as New York began rebounding in the mid-1990s, Bushwick remained largely untouched by gentrification. Only recently—after years of tireless work by government (especially the police), local groups, and the private sector—has the revitalization of this once-proud neighborhood begun. With Bushwick beginning to thrive again, New York City has finally left behind the disorder and failure that flowed from the misguided liberal reforms of the sixties and seventies. Yet if Bushwick is back, no one should forget what happened to it.       </p>
+    </div>
+    <img class="section-image" src="Door-Hero-2.png" alt="Victorian Door">
+
+    <!-- Section 3 -->
+    <div class="section-text">
+      <p>
+Little in Bushwick’s evolution from a bucolic seventeenth-century town to a robust twentieth-century working-class neighborhood suggested that it would one day symbolize urban breakdown. Dutch, Swedish, and Norwegian settlers first decamped in the vicinity in about 1640, and by 1660 had formed Boswijck (Town of Woods). By the 1830s, Bushwick had begun to lose its rural character. Advances in water transportation had remade the nearby Brooklyn waterfront into a bustling zone of shipyards, warehouses, distilleries, sugar refineries, and manufacturing plants, all attracting German, and later Italian, immigrant workers. The newcomers steadily built up Bushwick; densely packed two- and three-family homes came to line its streets, interspersed with retail strips and a smattering of warehouses and factories. Beer barons and factory owners even erected elegant mansions on Bushwick Avenue and a few other streets.      </p>
+    </div>
+    <img class="section-image" src="Door-Hero-3.png" alt="Edwardian Door">
   </div>
+
 </body>
 </html>
-
