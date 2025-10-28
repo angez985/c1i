@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core 1 Interaction</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: black;
+      display: grid;
+      grid-template-columns: 10% 1fr 10%;
+      grid-template-areas: "left main right";
+      overflow-x: hidden;
+    }
+
+    .side-image {
+      position: fixed;
+      top: 0;
+      width: 10%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .left-image {
+      left: 0;
+    }
+
+    .right-image {
+      right: 0;
+    }
+
+    .main-content {
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      padding: 2rem 0;
+    }
+
+    .top-image {
+      width: 60%;
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .middle-section {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 2rem;
+      overflow: visible;
+    }
+
+    .sticky-image-container {
+      width: 40%;
+      position: sticky;
+      top: 2rem;
+      align-self: flex-start;
+    }
+
+    .sticky-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .text-content {
+      width: 60%;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .text-content section {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+      }
+
+      .side-image {
+        display: none;
+      }
+
+      .top-image {
+        width: 90%;
+      }
+
+      .middle-section {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .sticky-image-container,
+      .text-content {
+        width: 100%;
+        position: static;
+      }
+
+      .text-content {
+        padding-top: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <img
+    class="side-image left-image"
+    src="Left-Fence.png"
+  >
+
+  <img
+    class="side-image right-image"
+    src="Right-Fence.png"
+  >
+
+  <div class="main-content">
+
+    <img
+      class="top-image"
+      src="Website-Title.png"
+    >
+
+    <div class="middle-section">
+
+      <div class="sticky-image-container">
+        <img
+          class="sticky-image"
+          src="House-Drawing.PNG"
+        >
+      </div>
+
+      <div class="text-content">
+        <section>
+          <h2> Bushwick </h2>
+<h3> Noun </h3>
+<p> A neighborhood in the northern part of Brooklyn, historically known for its working class roots, industrial architecture, and vibrant immigrant communities. In recent decades, Bushwick has become associated with rapid gentrification, a thriving arts scene, and evolving cultural identity. </p>
+        </section>
+
+        <section>
+      <h2>  Archeology </h2>
+<h3> Noun </h3>
+<p>
+1. The scientific study of human history and prehistory through the excavation of sites and the analysis of artifacts and other physical remains. </p>
+<p>
+2. A method of understanding the past through objects left behind ranging from ancient ruins to more recent material culture. </p>
+        </section>
+
+        <section>
+         <h2> Bushwick Archeology </h2>
+<h3> Website </h3>
+
+<p>
+A title that’s as ironic as it is insightful. Instead of ancient ruins or fossilized tools, its “artifacts” are doors; most of which date back only decades, not millennia. The central thesis of the book is that even in a place as modern and ever changing as Bushwick, the past is always present; it’s embedded in the overlooked, ordinary details of the build environment. </p>
+<p>
+History isn’t only found in museums or excavation pits; it’s in the worn handles, in the layered paint, in the architectural scars of buildings transformed over time. These doors become metaphors for thresholds between past and presents, between memory and change. Bushwick Archeology challenges the reader to look more closely, suggesting that everyday objects, no matter how recent, carry traces of culture, labor, migration, and transformation. Like all good archeology, it’s less about the age of the object, and more about the stories it can tell. </p>
+
+        </section>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
