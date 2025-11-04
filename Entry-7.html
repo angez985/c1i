@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Core 1 Interaction</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: black;
+      display: grid;
+      grid-template-columns: 10% 1fr 10%;
+      grid-template-areas: "left main right";
+      overflow-x: hidden;
+    }
+
+    .side-image {
+      position: fixed;
+      top: 0;
+      width: 10%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .left-image {
+      left: 0;
+    }
+
+    .right-image {
+      right: 0;
+    }
+
+    .main-content {
+      grid-area: main;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      padding: 2rem 0;
+    }
+
+    .top-image {
+      width: 60%;
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+
+    .middle-section {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-top: 2rem;
+      overflow: visible;
+    }
+
+    .sticky-image-container {
+      width: 40%;
+      position: sticky;
+      top: 2rem;
+      align-self: flex-start;
+    }
+
+    .sticky-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .text-content {
+      width: 60%;
+      line-height: 1.7;
+      text-align: left;
+    }
+
+    .text-content section {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+      }
+
+      .side-image {
+        display: none;
+      }
+
+      .top-image {
+        width: 90%;
+      }
+
+      .middle-section {
+        flex-direction: column;
+        width: 90%;
+      }
+
+      .sticky-image-container,
+      .text-content {
+        width: 100%;
+        position: static;
+      }
+
+      .text-content {
+        padding-top: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <img
+    class="side-image left-image"
+    src="Left-Fence.png"
+  >
+
+  <img
+    class="side-image right-image"
+    src="Right-Fence.png"
+  >
+
+  <div class="main-content">
+
+    <img
+      class="top-image"
+      src="Website-Title.png"
+    >
+
+    <div class="middle-section">
+
+      <div class="sticky-image-container">
+        <img
+          class="sticky-image"
+          src="Lipsius-Mansion-1.jpg"
+        >
+      </div>
+
+      <div class="text-content">
+        <section>
+          <h2> Doctor's Row </h2>
+<p> This house is sort of the gateway to the giant historic houses on Bushwick Avenue. The house sits on the corner of Bushwick and Willoughby Avenues, nestled right underneath the M train.
+        <p>The home was originally built for Catherina Claus-Lipsius, owner of the Claus-Lipsius Brewing Company on Bushwick and Forrest Street. The brewery was part of “brewers row”, the nickname given to the 14 breweries all operating within a 14 block radius in the 1890’s. Catherina’s first husband, Henry Claus, began the Claus Brewery in 1865 (it was also designed by Engelhardt), but, like a beer left out all night, Henry went flat in 1872. (He died. It wasn’t a very good joke.)</p>
+        <p>Catherina remarried Rudolph Lipsius in 1876, and the Brewery changed it’s name to the Claus-Lipsius Brewing Company to reflect both her husbands. Rudolph eventually also kicked like a keg, leaving Catherina to manage the brewery all on her own; which she did like a badass.
+The brewery remained profitable enough for Catherina to build a grand home for her family on fashionable Bushwick Avenue. Probably the coolest thing about the first part of this story is that other than starting the brewery, Henry also contributed to the history of Bushwick… he came up with the recipe for Brooklyn Lager, which Brooklyn Brewery began making in the 1980’s and I begin drinking at about 4:58 every day.</p>
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
