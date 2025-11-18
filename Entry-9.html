@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Core 1 Interaction</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: white;
+      color: black;
+      display: grid;
+      grid-template-columns: 10% 1fr 10%;
+      grid-template-areas:
+        "left main right";
+    }
+
+    .side-image {
+      position: fixed;
+      top: 0;
+      width: 10%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .left-image {
+      left: 0;
+    }
+
+    .right-image {
+      right: 0;
+    }
+
+    .main-content {
+      grid-area: main;
+      display: grid;
+      grid-template-columns: 100%;
+      justify-items: center;
+      z-index: 2;
+      padding: 2rem 0;
+    }
+
+    .top-image {
+      width: 60%;
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .section-text {
+      width: 70%;
+      text-align: center;
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+
+    .section-image {
+      width: 80%;
+      max-width: 100%;
+      height: auto;
+      margin: 1.5rem 0 3rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "main";
+      }
+
+      .side-image {
+        display: none;
+      }
+
+      .top-image {
+        width: 90%;
+      }
+
+      .section-text {
+        width: 90%;
+      }
+
+      .section-image {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img class="side-image left-image" src="Left-Fence.png" alt="Left Decorative Image">
+  <img class="side-image right-image" src="Right-Fence.png" alt="Right Decorative Image">
+
+  <div class="main-content">
+
+    <img class="top-image" src="Website-Title.png" alt="Website Title">
+
+    <video width="800" height="800" autoplay muted loop playsinline>
+  <source src="Door-Animation.mov" type="video/mp4">
+</video>
+</body>
+</html>
